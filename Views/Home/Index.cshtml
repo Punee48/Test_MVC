@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Test_MVC.Models.Product>
+
+<h2>Available Product in Store</h2>
+
+<table class="container">
+    <thead>
+        <tr>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Country</th>
+        </tr>
+    </thead>
+    <tbody class="table table-bordered">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Description</td>
+                <td>@item.Category</td>
+                <td>@item.Country</td>
+            </tr>
+        }
+    </tbody>
+</table>
